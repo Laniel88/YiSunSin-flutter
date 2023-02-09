@@ -150,7 +150,7 @@ class _Content extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Image.asset(getImagePath(CoinState.front), width: 45),
+              Image.asset(getImagePath(CoinState.back), width: 45),
               Image.asset(getImagePath(CoinState.back), width: 45),
               const Text(
                 ": 잔을 그대로 오른쪽(역방향) 사람에게 전달",

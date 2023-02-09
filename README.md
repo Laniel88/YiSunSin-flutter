@@ -2,7 +2,7 @@ _Read this in other languages: [English](README.eng.md)_
 
 <div align="center">
 
-<img src=".yss/yss_logo.png" width="20%">
+<img src=".dev/yss_logo.png" width="20%">
 <h1> 이순신 술 게임 </h1>
 술 게임 중 하나인 <b>이순신 게임</b> 을 보조하기 위해 만들어진 앱입니다.
 <br><br>
@@ -12,7 +12,7 @@ _Read this in other languages: [English](README.eng.md)_
 
 <h3> Screenshots </h3>
 
-<img src=".yss/YSS_S2.gif" width = "37%"> <img src=".yss/YSS_S3.gif" width = "37%">
+<img src=".dev/screenshots/YSS_S2.gif" width = "37%"> <img src=".dev/screenshots/YSS_S3.gif" width = "37%">
 
 </div>
 
@@ -59,8 +59,7 @@ gif나 영상이 아닌 이미지 시퀀스를 사용한 이유는 다양한 종
 - [Coin icons created by Freepik - Flaticon](https://www.flaticon.com/free-icons/coin)
 - [Settings icons created by Freepik - Flaticon](https://www.flaticon.com/free-icons/settings)
 - [Information icons created by Freepik - Flaticon](https://www.flaticon.com/free-icons/information)
-- <a href="https://www.flaticon.com/free-icons/sword" title="sword icons">Sword icons created by Smashicons - Flaticon</a>
-- <a href="https://www.flaticon.com/free-icons/soju" title="soju icons">Soju icons created by small.smiles - Flaticon</a>
+
 #### Fonts
 
 - [강원교육모두체](https://www.gwe.go.kr/mbshome/mbs/kr/subview.do?id=kr_070902000000)

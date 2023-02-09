@@ -6,8 +6,11 @@ assets/img/coin.png
 assets/img/information.png
 assets/img/settings.png
 
-.yss/appstore.png
-.yss/playstore.png
+.dev/appstore.png
+.dev/playstore.png
+
+# build
+.dev/build/
 
 ## ==== FLUTTER gitignore ====== ##
 
