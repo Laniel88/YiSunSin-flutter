@@ -1,0 +1,45 @@
+name: yisunsin
+description: A new Flutter project.
+
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.18.1 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  package_info_plus: ^3.0.2
+  provider: ^6.0.5
+  image_sequence_animator: ^2.0.0
+  page_transition: ^2.0.9
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/coin/FF/
+    - assets/coin/FB/
+    - assets/coin/BF/
+    - assets/coin/BB/
+    - assets/coin/front.png
+    - assets/coin/back.png
+    - assets/img/coin.png # img used for flip button
+    - assets/img/settings.png
+    - assets/img/information.png
+  fonts:
+    - family: LineSeed
+      fonts:
+        - asset: assets/fonts/LineSeed/LINESeedKR-Bd.otf
+          weight: 600
+        - asset: assets/fonts/LineSeed/LINESeedKR-Rg.otf
+          weight: 400
+        - asset: assets/fonts/LineSeed/LINESeedKR-Th.otf
+          weight: 200
