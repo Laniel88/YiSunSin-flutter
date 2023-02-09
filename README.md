@@ -2,7 +2,7 @@ _Read this in other languages: [English](README.eng.md)_
 
 <div align="center">
 
-<img src=".dev/yss_logo.png" width="20%">
+<img src="dev/yss_logo.png" width="20%">
 <h1> 이순신 술 게임 </h1>
 술 게임 중 하나인 <b>이순신 게임</b> 을 보조하기 위해 만들어진 앱입니다.
 <br><br>
@@ -12,7 +12,7 @@ _Read this in other languages: [English](README.eng.md)_
 
 <h3> Screenshots </h3>
 
-<img src=".dev/screenshots/YSS_S2.gif" width = "37%"> <img src=".dev/screenshots/YSS_S3.gif" width = "37%">
+<img src="dev/screenshots/YSS_S2.gif" width = "37%"> <img src="dev/screenshots/YSS_S3.gif" width = "37%">
 
 </div>
 
