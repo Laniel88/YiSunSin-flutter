@@ -5,8 +5,8 @@ import 'package:yisunsin/components/coins.dart';
 import 'package:yisunsin/components/flip_button.dart';
 import 'package:yisunsin/const/colors.dart';
 import 'package:yisunsin/components/os_dependent.dart';
-import 'package:yisunsin/screen/information_view.dart';
-import 'package:yisunsin/screen/settings_view.dart';
+import 'package:yisunsin/view/information_view.dart';
+import 'package:yisunsin/view/settings_view.dart';
 import 'package:yisunsin/provider/coin_state_provider.dart';
 
 class HomeView extends StatefulWidget {

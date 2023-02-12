@@ -4,9 +4,9 @@ import 'package:package_info_plus/package_info_plus.dart';
 import 'package:provider/provider.dart';
 import 'package:yisunsin/const/add_license.dart';
 import 'package:yisunsin/provider/app_info_provider.dart';
-import 'package:yisunsin/screen/home_view.dart';
+import 'package:yisunsin/view/home_view.dart';
 import 'package:yisunsin/provider/coin_state_provider.dart';
-import 'package:yisunsin/screen/splash_screen.dart';
+import 'package:yisunsin/view/splash_screen.dart';
 
 void main() {
   addLicenses();
