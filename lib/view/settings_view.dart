@@ -13,6 +13,9 @@ class SettingsVeiw extends StatelessWidget {
   Widget build(BuildContext context) {
     String version = Provider.of<AppInfoProvider>(context).version;
     String buildNumber = Provider.of<AppInfoProvider>(context).buildNumber;
+
+    final sizeWeight = MediaQuery.of(context).size.width / 400;
+
     return Scaffold(
         backgroundColor: BACKGROUND_COLOR2,
         body: SafeArea(
@@ -29,16 +32,18 @@ class SettingsVeiw extends StatelessWidget {
                   },
                 ),
                 const SizedBox(height: 20),
-                const _Sliders(),
+                _Sliders(sizeWeight: sizeWeight),
                 const SizedBox(height: 50),
-                const _QuantitySelector(),
+                _AnimationSelector(sizeWeight: sizeWeight),
                 const SizedBox(height: 50),
                 _License(
+                  sizeWeight: sizeWeight,
                   version: version,
                   buildNumber: buildNumber,
                 ),
                 const SizedBox(height: 30),
                 _AppVersion(
+                  sizeWeight: sizeWeight,
                   version: version,
                   buildNumber: buildNumber,
                 )
@@ -90,7 +95,11 @@ class _Header extends StatelessWidget {
 }
 
 class _Sliders extends StatelessWidget {
-  const _Sliders({Key? key}) : super(key: key);
+  final double sizeWeight;
+  const _Sliders({
+    required this.sizeWeight,
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -126,8 +135,10 @@ class _Sliders extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               const SizedBox(width: 20),
-              Image.asset(getImagePath(CoinState.front), width: 50),
-              Image.asset(getImagePath(CoinState.front), width: 50),
+              Image.asset(getImagePath(CoinState.front),
+                  width: 50 * sizeWeight),
+              Image.asset(getImagePath(CoinState.front),
+                  width: 50 * sizeWeight),
               Expanded(
                 child: Slider(
                   value: ff.toDouble(),
@@ -148,8 +159,9 @@ class _Sliders extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               const SizedBox(width: 20),
-              Image.asset(getImagePath(CoinState.front), width: 50),
-              Image.asset(getImagePath(CoinState.back), width: 50),
+              Image.asset(getImagePath(CoinState.front),
+                  width: 50 * sizeWeight),
+              Image.asset(getImagePath(CoinState.back), width: 50 * sizeWeight),
               Expanded(
                 child: Slider(
                   value: fb.toDouble(),
@@ -170,8 +182,8 @@ class _Sliders extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               const SizedBox(width: 20),
-              Image.asset(getImagePath(CoinState.back), width: 50),
-              Image.asset(getImagePath(CoinState.back), width: 50),
+              Image.asset(getImagePath(CoinState.back), width: 50 * sizeWeight),
+              Image.asset(getImagePath(CoinState.back), width: 50 * sizeWeight),
               Expanded(
                 child: Slider(
                   value: bb.toDouble(),
@@ -193,9 +205,9 @@ class _Sliders extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 30),
             child: Text(
               "현재 확률 : [ ${100 * ff ~/ (ff + fb + bb)}% | ${100 * fb ~/ (ff + fb + bb)}% | ${100 * bb ~/ (ff + fb + bb)}% ]",
-              style: const TextStyle(
+              style: TextStyle(
                 color: Colors.black45,
-                fontSize: 13,
+                fontSize: 13 * sizeWeight,
                 fontFamily: "LineSeed",
                 fontWeight: FontWeight.w600,
               ),
@@ -207,8 +219,12 @@ class _Sliders extends StatelessWidget {
   }
 }
 
-class _QuantitySelector extends StatelessWidget {
-  const _QuantitySelector({Key? key}) : super(key: key);
+class _AnimationSelector extends StatelessWidget {
+  final double sizeWeight;
+  const _AnimationSelector({
+    required this.sizeWeight,
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -247,9 +263,11 @@ class _QuantitySelector extends StatelessWidget {
 }
 
 class _License extends StatelessWidget {
+  final double sizeWeight;
   final String version;
   final String buildNumber;
   const _License({
+    required this.sizeWeight,
     required this.version,
     required this.buildNumber,
     Key? key,
@@ -322,9 +340,11 @@ Widget _license(String data) {
 }
 
 class _AppVersion extends StatelessWidget {
+  final double sizeWeight;
   final String version;
   final String buildNumber;
   const _AppVersion({
+    required this.sizeWeight,
     required this.version,
     required this.buildNumber,
     Key? key,

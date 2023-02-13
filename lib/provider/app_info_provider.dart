@@ -8,7 +8,7 @@ class AppInfoProvider extends ChangeNotifier {
   String get version => _version;
   String get buildNumber => _buildNumber;
 
-  saveVersionBuild({required String version, required String buildNumber}) {
+  saveVersion({required String version, required String buildNumber}) {
     _version = version;
     _buildNumber = buildNumber;
   }

@@ -14,7 +14,9 @@ class FlipButton extends StatelessWidget {
   Widget build(BuildContext context) {
     if (!Provider.of<CoinStateProvider>(context).isFlipping) {
       return Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 60),
+        padding: EdgeInsets.symmetric(
+          horizontal: MediaQuery.of(context).size.width / 6,
+        ),
         child: ElevatedButton(
           onPressed: onPressed,
           style: ElevatedButton.styleFrom(

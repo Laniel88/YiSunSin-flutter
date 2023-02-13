@@ -23,7 +23,13 @@ class InformationView extends StatelessWidget {
                     Navigator.pop(context);
                   },
                 ),
-                const _Content(),
+                const DefaultTextStyle(
+                  style: TextStyle(
+                    overflow: TextOverflow.clip,
+                    fontFamily: "LineSeed",
+                  ),
+                  child: _Content(),
+                ),
               ],
             ),
           ),
@@ -76,41 +82,40 @@ class _Content extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final sizeWeight = MediaQuery.of(context).size.width / 400;
+
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text(
+          Text(
             "이순신 술 게임",
             style: TextStyle(
-              color: Color.fromARGB(255, 48, 48, 48),
-              fontSize: 33,
-              fontFamily: "LineSeed",
+              color: const Color.fromARGB(255, 48, 48, 48),
+              fontSize: 33 * sizeWeight,
               fontWeight: FontWeight.w600,
             ),
           ),
           const SizedBox(height: 13),
-          const Text(
+          Text(
             "해당 룰은 동전 2개를 기준으로 하며, "
             "\n확률 조정 기능이 추가되면서 의미가 없어진 동전 1개 기능은 제외되었습니다.",
             style: TextStyle(
-              color: Color.fromARGB(255, 91, 91, 91),
-              fontSize: 13,
-              fontFamily: "LineSeed",
+              color: const Color.fromARGB(255, 91, 91, 91),
+              fontSize: 13 * sizeWeight,
               fontWeight: FontWeight.w400,
             ),
           ),
           const SizedBox(height: 20),
-          const Text(
+          Text(
             "1. 대형 컵 하나를 두고 각자의 턴에 잔에 술을 따른다.\n    (원하는 만큼, 또는 1잔)"
             "\n\n"
             "2. 동전 두개를 던져 결과에 따라 다음 행동을 취한다.",
             style: TextStyle(
-              color: Color.fromARGB(255, 45, 45, 45),
-              fontSize: 14.5,
-              fontFamily: "LineSeed",
+              color: const Color.fromARGB(255, 45, 45, 45),
+              fontSize: 15 * sizeWeight,
               fontWeight: FontWeight.w400,
             ),
           ),
@@ -118,14 +123,15 @@ class _Content extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Image.asset(getImagePath(CoinState.front), width: 45),
-              Image.asset(getImagePath(CoinState.front), width: 45),
-              const Text(
+              Image.asset(getImagePath(CoinState.front),
+                  width: 45 * sizeWeight),
+              Image.asset(getImagePath(CoinState.front),
+                  width: 45 * sizeWeight),
+              Text(
                 ": 잔에 있는 모든 술을 맛있게 먹는다",
                 style: TextStyle(
-                  color: Color.fromARGB(255, 45, 45, 45),
-                  fontSize: 13,
-                  fontFamily: "LineSeed",
+                  color: const Color.fromARGB(255, 45, 45, 45),
+                  fontSize: 13 * sizeWeight,
                   fontWeight: FontWeight.w400,
                 ),
               ),
@@ -134,14 +140,14 @@ class _Content extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Image.asset(getImagePath(CoinState.front), width: 45),
-              Image.asset(getImagePath(CoinState.back), width: 45),
-              const Text(
+              Image.asset(getImagePath(CoinState.front),
+                  width: 45 * sizeWeight),
+              Image.asset(getImagePath(CoinState.back), width: 45 * sizeWeight),
+              Text(
                 ": 잔을 그대로 왼쪽(정방향) 사람에게 전달",
                 style: TextStyle(
-                  color: Color.fromARGB(255, 45, 45, 45),
-                  fontSize: 13,
-                  fontFamily: "LineSeed",
+                  color: const Color.fromARGB(255, 45, 45, 45),
+                  fontSize: 13 * sizeWeight,
                   fontWeight: FontWeight.w400,
                 ),
               ),
@@ -150,38 +156,35 @@ class _Content extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Image.asset(getImagePath(CoinState.back), width: 45),
-              Image.asset(getImagePath(CoinState.back), width: 45),
-              const Text(
+              Image.asset(getImagePath(CoinState.back), width: 45 * sizeWeight),
+              Image.asset(getImagePath(CoinState.back), width: 45 * sizeWeight),
+              Text(
                 ": 잔을 그대로 오른쪽(역방향) 사람에게 전달",
                 style: TextStyle(
-                  color: Color.fromARGB(255, 45, 45, 45),
-                  fontSize: 13,
-                  fontFamily: "LineSeed",
+                  color: const Color.fromARGB(255, 45, 45, 45),
+                  fontSize: 13 * sizeWeight,
                   fontWeight: FontWeight.w400,
                 ),
               ),
             ],
           ),
           const SizedBox(height: 20),
-          const Text(
+          Text(
             "3. 1,2의 과정을 계속 반복한다.",
             style: TextStyle(
-              color: Color.fromARGB(255, 45, 45, 45),
-              fontSize: 14.5,
-              fontFamily: "LineSeed",
+              color: const Color.fromARGB(255, 45, 45, 45),
+              fontSize: 15 * sizeWeight,
               fontWeight: FontWeight.w400,
             ),
           ),
           const SizedBox(height: 30),
-          const Text(
+          Text(
             "확률 조정이 필요할 경우 설정에서 확률을 수정할 수 있습니다."
             "\n위의 3가지 경우에 대해 수치를 조정할 수 있으며, 이 수치값으로 확률이 계산됩니다."
             "\n기본 수치는 [1 | 2 | 1] (25%, 50%, 25%) 입니다.",
             style: TextStyle(
-              color: Color.fromARGB(255, 91, 91, 91),
-              fontSize: 13,
-              fontFamily: "LineSeed",
+              color: const Color.fromARGB(255, 91, 91, 91),
+              fontSize: 15 * sizeWeight,
               fontWeight: FontWeight.w400,
             ),
           ),

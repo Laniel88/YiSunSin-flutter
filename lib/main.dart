@@ -33,7 +33,7 @@ void main() {
               future: PackageInfo.fromPlatform(),
               builder: (context, snapshot) {
                 if (snapshot.hasData) {
-                  Provider.of<AppInfoProvider>(context).saveVersionBuild(
+                  Provider.of<AppInfoProvider>(context).saveVersion(
                     version: snapshot.data!.version,
                     buildNumber: snapshot.data!.buildNumber,
                   );
