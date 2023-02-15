@@ -14,7 +14,7 @@ class Coins extends StatelessWidget {
         : 260;
     List<bool> animationFinished = [false, false];
 
-    if (Provider.of<CoinStateProvider>(context).isFlipping == true) {
+    if (Provider.of<CoinStateProvider>(context, listen: false).isFlipping == true) {
       return Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.stretch,

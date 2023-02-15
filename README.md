@@ -66,6 +66,7 @@ gif나 영상이 아닌 이미지 시퀀스를 사용한 이유는 다양한 종
 - [Coin icons created by Freepik - Flaticon](https://www.flaticon.com/free-icons/coin)
 - [Settings icons created by Freepik - Flaticon](https://www.flaticon.com/free-icons/settings)
 - [Information icons created by Freepik - Flaticon](https://www.flaticon.com/free-icons/information)
+- <a href="https://www.flaticon.com/free-icons/soju" title="soju icons">Soju icons created by Freepik - Flaticon</a>
 
 #### Fonts
 
