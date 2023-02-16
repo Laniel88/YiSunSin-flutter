@@ -37,7 +37,7 @@ class SettingsVeiw extends StatelessWidget {
                 _Sliders(sizeWeight: sizeWeight),
                 const SizedBox(height: 50),
                 _AnimationSelector(sizeWeight: sizeWeight),
-                const SizedBox(height: 50),
+                const SizedBox(height: 30),
                 _License(
                   sizeWeight: sizeWeight,
                   version: version,
@@ -250,24 +250,38 @@ class _AnimationSelector extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 30),
           child: CupertinoTheme(
-              data: const CupertinoThemeData(brightness: Brightness.light),
-              child: CupertinoPicker(
-                scrollController: FixedExtentScrollController(
-                    initialItem: Provider.of<AnimationProvider>(context)
-                        .getIndexByAnimationType()),
-                squeeze: 1.7,
-                itemExtent: 45,
-                looping: false,
-                onSelectedItemChanged: (int value) {
-                  Provider.of<AnimationProvider>(context, listen: false)
-                      .setAnimationTypeWithIndex(value);
-                },
-                children: [
-                  Center(child: Text("애니메이션 비활성화", style: pickerTextStyle())),
-                  Center(child: Text("날아라 소주병", style: pickerTextStyle())),
-                  Center(child: Text("날아라 소주잔", style: pickerTextStyle())),
-                ],
-              )),
+            data: const CupertinoThemeData(brightness: Brightness.light),
+            child: CupertinoPicker(
+              scrollController: FixedExtentScrollController(
+                  initialItem: Provider.of<AnimationProvider>(context)
+                      .getIndexByAnimationType()),
+              squeeze: 1.7,
+              itemExtent: 45,
+              looping: false,
+              onSelectedItemChanged: (int value) {
+                Provider.of<AnimationProvider>(context, listen: false)
+                    .setAnimationTypeWithIndex(value);
+              },
+              children: [
+                Center(child: Text("애니메이션 비활성화", style: pickerTextStyle())),
+                Center(child: Text("날아라 소주병", style: pickerTextStyle())),
+                Center(child: Text("날아라 소주잔", style: pickerTextStyle())),
+              ],
+            ),
+          ),
+        ),
+        const Padding(
+          padding: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+          child: Text(
+            "애니메이션은 계속해서 추가될 예정입니다",
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              color: Color.fromARGB(255, 112, 112, 112),
+              fontSize: 13,
+              fontFamily: "LineSeed",
+              fontWeight: FontWeight.w400,
+            ),
+          ),
         ),
       ],
     );
