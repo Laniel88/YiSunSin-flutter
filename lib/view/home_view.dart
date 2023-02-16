@@ -67,6 +67,7 @@ class _HomeViewState extends State<HomeView> {
 
   onPressedFlipButton() {
     Provider.of<CoinStateProvider>(context, listen: false).flipCoin();
+    Provider.of<CoinStateProvider>(context, listen: false).quitAnimation();
     Provider.of<CoinStateProvider>(context, listen: false).setFlipState(true);
   }
 }

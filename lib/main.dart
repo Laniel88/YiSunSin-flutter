@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:provider/provider.dart';
 import 'package:yisunsin/const/add_license.dart';
+import 'package:yisunsin/provider/animation_provider.dart';
 import 'package:yisunsin/provider/app_info_provider.dart';
 import 'package:yisunsin/view/home_view.dart';
 import 'package:yisunsin/provider/coin_state_provider.dart';
@@ -14,7 +15,8 @@ void main() {
     MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => CoinStateProvider()),
-        ChangeNotifierProvider(create: (_) => AppInfoProvider())
+        ChangeNotifierProvider(create: (_) => AppInfoProvider()),
+        ChangeNotifierProvider(create: (_) => AnimationProvider()),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

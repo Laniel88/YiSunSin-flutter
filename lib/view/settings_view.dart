@@ -1,8 +1,10 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 import 'package:yisunsin/const/colors.dart';
 import 'package:yisunsin/components/os_dependent.dart';
+import 'package:yisunsin/provider/animation_provider.dart';
 import 'package:yisunsin/provider/app_info_provider.dart';
 import 'package:yisunsin/provider/coin_state_provider.dart';
 
@@ -231,11 +233,11 @@ class _AnimationSelector extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: const [
-        Padding(
+      children: [
+        const Padding(
           padding: EdgeInsets.symmetric(horizontal: 28),
           child: Text(
-            "당첨 애니메이션 여부",
+            "당첨 애니메이션 선택",
             style: TextStyle(
               color: Color.fromARGB(255, 69, 69, 69),
               fontSize: 20,
@@ -244,22 +246,34 @@ class _AnimationSelector extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(height: 10),
+        const SizedBox(height: 10),
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 30),
-          child: Text(
-            "추가 예정입니다",
-            style: TextStyle(
-              color: Color.fromARGB(255, 112, 112, 112),
-              fontSize: 15,
-              fontFamily: "LineSeed",
-              fontWeight: FontWeight.w400,
-            ),
-          ),
+          padding: const EdgeInsets.symmetric(horizontal: 30),
+          child: CupertinoTheme(
+              data: const CupertinoThemeData(brightness: Brightness.light),
+              child: CupertinoPicker(
+                scrollController: FixedExtentScrollController(
+                    initialItem: Provider.of<AnimationProvider>(context)
+                        .getIndexByAnimationType()),
+                squeeze: 1.7,
+                itemExtent: 45,
+                looping: false,
+                onSelectedItemChanged: (int value) {
+                  Provider.of<AnimationProvider>(context, listen: false)
+                      .setAnimationTypeWithIndex(value);
+                },
+                children: [
+                  Center(child: Text("애니메이션 비활성화", style: pickerTextStyle())),
+                  Center(child: Text("날아라 소주병", style: pickerTextStyle())),
+                  Center(child: Text("날아라 소주잔", style: pickerTextStyle())),
+                ],
+              )),
         ),
       ],
     );
   }
+
+  TextStyle pickerTextStyle() => const TextStyle(fontSize: 20);
 }
 
 class _License extends StatelessWidget {
