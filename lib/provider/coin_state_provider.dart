@@ -16,12 +16,27 @@ class CoinStateProvider extends ChangeNotifier {
   CoinState _firstCoinTarget = CoinState.front;
   CoinState _secondCoinTarget = CoinState.back;
 
+  bool _animation = false;
+  bool get animation => _animation;
+
   int _powerFF = 1;
   int _powerFB = 2;
   int _powerBB = 1;
   int get powerFF => _powerFF;
   int get powerFB => _powerFB;
   int get powerBB => _powerBB;
+
+  checkAnimation() {
+    if (_firstCoinState == CoinState.front &&
+        _secondCoinState == CoinState.front)
+      _animation = true;
+    else
+      _animation = false;
+  }
+
+  quitAnimation() {
+    _animation = false;
+  }
 
   setFlipState(bool state) {
     _isFlipping = state;

@@ -3,7 +3,7 @@ description: A new Flutter project.
 
 publish_to: "none" # Remove this line if you wish to publish to pub.dev
 
-version: 0.9.1+3
+version: 0.9.2+4
 
 environment:
   sdk: ">=2.18.1 <3.0.0"
@@ -12,10 +12,11 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.2
+  page_transition: ^2.0.9
   package_info_plus: ^3.0.2
   provider: ^6.0.5
   image_sequence_animator: ^2.0.0
-  page_transition: ^2.0.9
+  animated_background: ^2.0.0
 
 dev_dependencies:
   flutter_test:
@@ -31,9 +32,11 @@ flutter:
     - assets/coin/BB/
     - assets/coin/front.png
     - assets/coin/back.png
-    - assets/img/coin.png # img used for flip button
+    - assets/img/coin.png
     - assets/img/settings.png
     - assets/img/information.png
+    - assets/img/soju_bottle.png
+    - assets/img/soju_glass.png
   fonts:
     - family: LineSeed
       fonts:

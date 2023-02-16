@@ -3,6 +3,7 @@ import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 import 'package:yisunsin/components/coins.dart';
 import 'package:yisunsin/components/flip_button.dart';
+import 'package:yisunsin/components/winning_animation.dart';
 import 'package:yisunsin/const/colors.dart';
 import 'package:yisunsin/components/os_dependent.dart';
 import 'package:yisunsin/view/information_view.dart';
@@ -20,8 +21,9 @@ class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: BACKGROUND_COLOR,
-        body: SafeArea(
+      backgroundColor: BACKGROUND_COLOR,
+      body: WinningAnimation(
+        child: SafeArea(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -38,7 +40,9 @@ class _HomeViewState extends State<HomeView> {
               const Spacer(flex: 9),
             ],
           ),
-        ));
+        ),
+      ),
+    );
   }
 
   onPressedInformtaion() {
@@ -63,6 +67,7 @@ class _HomeViewState extends State<HomeView> {
 
   onPressedFlipButton() {
     Provider.of<CoinStateProvider>(context, listen: false).flipCoin();
+    Provider.of<CoinStateProvider>(context, listen: false).quitAnimation();
     Provider.of<CoinStateProvider>(context, listen: false).setFlipState(true);
   }
 }
