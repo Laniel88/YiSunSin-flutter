@@ -52,17 +52,17 @@ class CoinStateProvider extends ChangeNotifier {
   }
 
   setPowerFF(int ff) {
-    _powerFF = ff;
+    _powerFF = nonZero(ff, _powerFB, _powerBB) ? ff : 1;
     notifyListeners();
   }
 
   setPowerFB(int fb) {
-    _powerFB = fb;
+    _powerFB = nonZero(_powerFF, fb, _powerBB) ? fb : 1;
     notifyListeners();
   }
 
   setPowerBB(int bb) {
-    _powerBB = bb;
+    _powerBB = nonZero(_powerFF, _powerFB, bb) ? bb : 1;
     notifyListeners();
   }
 
@@ -86,6 +86,11 @@ class CoinStateProvider extends ChangeNotifier {
   updateState() {
     _firstCoinState = _firstCoinTarget;
     _secondCoinState = _secondCoinTarget;
+  }
+
+  bool nonZero(int a, int b, int c) {
+    if (a == 0 && b == 0 && c == 0) return false;
+    return true;
   }
 
   String getFirstCoinAnimationPath() {
