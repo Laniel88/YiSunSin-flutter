@@ -31,7 +31,7 @@ class _WinningAnimationState extends State<WinningAnimation>
       return AnimatedBackground(
           behaviour: RandomParticleBehaviour(
             options: ParticleOptions(
-                image: Image.asset("assets/img/soju_bottle.png"),
+                image: Image.asset("assets/img/bottle.png"),
                 spawnMaxRadius: 50,
                 spawnMinRadius: 20,
                 maxOpacity: 0.7,
@@ -45,7 +45,7 @@ class _WinningAnimationState extends State<WinningAnimation>
       return AnimatedBackground(
           behaviour: RandomParticleBehaviour(
             options: ParticleOptions(
-                image: Image.asset("assets/img/soju_glass.png"),
+                image: Image.asset("assets/img/glass.png"),
                 spawnMaxRadius: 20,
                 spawnMinRadius: 10,
                 maxOpacity: 0.7,
