@@ -4,6 +4,9 @@ _Read this in other languages: [English](README.eng.md)_
 
 <img src="dev/yss_logo.png" width="20%">
 <h1> 이순신 술 게임 </h1>
+
+<a href="https://play.google.com/store/apps/details?id=com.laniel.yisunsin"><img src="dev/google_play.png" width = "20%"></a>
+
 술 게임 중 하나인 <b>이순신 게임</b> 을 보조하기 위해 만들어진 앱입니다.
 <br><br>
 동전을 잘 소지하지 않는 사람들을 위해 단순한 UI의 <br><b>동전 던지기 기능과 당첨 애니메이션</b>을 제공합니다.
@@ -12,7 +15,7 @@ _Read this in other languages: [English](README.eng.md)_
 
 <h3> Screenshots </h3>
 
-<img src="dev/screenshots/YSS_S2.gif" width = "37%"> <img src="dev/screenshots/YSS_S3.gif" width = "37%">
+<img src="dev/screenshots/YSS_S2.gif" width = "34%"> <img src="dev/screenshots/YSS_S3.gif" width = "34%">
 
 </div>
 
@@ -57,7 +60,7 @@ gif나 영상이 아닌 이미지 시퀀스를 사용한 이유는 다양한 종
 - [ ] 이미지 시퀀스를 활용한 애니메이션 종류 늘리기
 - [ ] 배경 색 설정 기능 추가
 - [ ] 배경 및 확률 정보 DB 저장 기능 구현
-- [ ] 당첨 애니메이션 추가
+- [x] 당첨 애니메이션 추가
 
 ### 저작권 및 License
 
@@ -66,7 +69,7 @@ gif나 영상이 아닌 이미지 시퀀스를 사용한 이유는 다양한 종
 - [Coin icons created by Freepik - Flaticon](https://www.flaticon.com/free-icons/coin)
 - [Settings icons created by Freepik - Flaticon](https://www.flaticon.com/free-icons/settings)
 - [Information icons created by Freepik - Flaticon](https://www.flaticon.com/free-icons/information)
-- <a href="https://www.flaticon.com/free-icons/soju" title="soju icons">Soju icons created by Freepik - Flaticon</a>
+- [Soju icons created by Freepik - Flaticon](https://www.flaticon.com/free-icons/soju)
 
 #### Fonts
 
