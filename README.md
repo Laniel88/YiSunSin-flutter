@@ -5,7 +5,7 @@ _Read this in other languages: [English](README.eng.md)_
 <img src="dev/yss_logo.png" width="20%">
 <h1> 이순신 술 게임 </h1>
 
-<a href="https://play.google.com/store/apps/details?id=com.laniel.yisunsin"><img src="dev/google_play.png" width = "20%"></a>
+<a href="https://play.google.com/store/apps/details?id=com.laniel.yisunsin"><img src="dev/google_play.png" width = "150px"></a>
 
 술 게임 중 하나인 <b>이순신 게임</b> 을 보조하기 위해 만들어진 앱입니다.
 <br><br>
@@ -38,15 +38,9 @@ _Read this in other languages: [English](README.eng.md)_
 
 > 참고 : [나무위키-술 게임/운 게임/이순신 게임](https://namu.wiki/w/술%20게임/운%20게임#이순신%20게임)
 
-## 구현 및 개발 관련
+## Info
 
-아이디어는 [Image-showcase in flutter](https://proandroiddev.com/360-degree-image-showcase-in-flutter-ee53a49e8975)에서 비롯되었고 이를 바탕으로 시퀀스 위젯을 직접 구현하려 했지만 이미 좋은 [패키지](https://pub.dev/packages/image_sequence_animator)가 있어 이 패키지를 사용해 진행하게 되었다.
-
-gif나 영상이 아닌 이미지 시퀀스를 사용한 이유는 다양한 종류의 애니메이션을 효과적으로 구현할 수 있다고 생각했기 때문이다.
-
-하루 만에 asset 제작, 핵심 기능 구현이 완성될 정도로 간단한 프로젝트이다.
-
-## Version
+### Version
 
 | VERSION   | NOTE                                             |
 | --------- | ------------------------------------------------ |
